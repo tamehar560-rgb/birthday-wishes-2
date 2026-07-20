@@ -350,3 +350,22 @@ button:hover {
         box-shadow: 0 0 30px #ff1493;
     }
 }
+.star {
+    position: fixed;
+    top: -20px;
+    font-size: 25px;
+    animation: starFall linear infinite;
+    z-index: 999;
+}
+
+@keyframes starFall {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}

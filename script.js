@@ -130,3 +130,16 @@ function createBalloon() {
 }
 
 setInterval(createBalloon, 1000);
+let count = 3;
+
+let countdown = setInterval(() => {
+    document.getElementById("countdown").innerHTML = count;
+
+    count--;
+
+    if (count < 0) {
+        clearInterval(countdown);
+        document.getElementById("countdown").innerHTML = "🎂 Happy Birthday 🎉";
+    }
+
+}, 1000);

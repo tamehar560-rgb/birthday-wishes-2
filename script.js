@@ -113,3 +113,20 @@ function createStar() {
 }
 
 setInterval(createStar, 700);
+function createBalloon() {
+    const balloon = document.createElement("div");
+
+    balloon.innerHTML = "🎈";
+    balloon.className = "balloon";
+
+    balloon.style.left = Math.random() * window.innerWidth + "px";
+    balloon.style.animationDuration = (Math.random() * 3 + 3) + "s";
+
+    document.body.appendChild(balloon);
+
+    setTimeout(() => {
+        balloon.remove();
+    }, 6000);
+}
+
+setInterval(createBalloon, 1000);

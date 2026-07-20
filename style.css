@@ -369,3 +369,22 @@ button:hover {
         opacity: 0;
     }
 }
+.balloon {
+    position: fixed;
+    bottom: -50px;
+    font-size: 40px;
+    animation: flyBalloon linear infinite;
+    z-index: 999;
+}
+
+@keyframes flyBalloon {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}

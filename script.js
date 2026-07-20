@@ -96,3 +96,20 @@ function playMusic() {
     let music = document.getElementById("birthdayMusic");
     music.play();
                                      }
+function createStar() {
+    const star = document.createElement("div");
+
+    star.innerHTML = "✨";
+    star.className = "star";
+
+    star.style.left = Math.random() * window.innerWidth + "px";
+    star.style.animationDuration = (Math.random() * 3 + 2) + "s";
+
+    document.body.appendChild(star);
+
+    setTimeout(() => {
+        star.remove();
+    }, 5000);
+}
+
+setInterval(createStar, 700);

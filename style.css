@@ -388,3 +388,30 @@ button:hover {
         opacity: 0;
     }
 }
+@media (max-width: 600px) {
+
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 90%;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .cake img {
+        width: 150px;
+        max-width: 100%;
+    }
+
+}

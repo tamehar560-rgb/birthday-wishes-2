@@ -8,21 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
 function showWish() {
     alert("🎂 Happy Birthday! May your day be full of happiness, success and beautiful moments ❤️");
 }
-function createConfetti() {
-    const confetti = document.createElement("div");
-    confetti.className = "confetti";
-
-    confetti.style.left = Math.random() * window.innerWidth + "px";
-    confetti.style.animationDuration = (Math.random() * 3 + 2) + "s";
-
-    document.body.appendChild(confetti);
-
-    setTimeout(() => {
-        confetti.remove();
-    }, 5000);
-}
-
-setInterval(createConfetti, 200);
 const colors = [
     "#ff0000",
     "#00ff00",
@@ -60,21 +45,6 @@ function typeMessage() {
 }
 
 typeMessage();
-let colors = ["#ff9a9e", "#fad0c4", "#a1c4fd", "#c2e9fb"];
-
-let i = 0;
-
-setInterval(() => {
-    document.body.style.background = 
-    `linear-gradient(45deg, ${colors[i]}, #ffffff)`;
-
-    i++;
-
-    if (i >= colors.length) {
-        i = 0;
-    }
-
-}, 2000);
 function createHeart() {
     const heart = document.createElement("div");
 
@@ -133,13 +103,12 @@ setInterval(createBalloon, 1000);
 let count = 3;
 
 let countdown = setInterval(() => {
-    document.getElementById("countdown").innerHTML = count;
-
+    document.querySelector("#countdown h1").innerHTML = count;
     count--;
 
     if (count < 0) {
         clearInterval(countdown);
-        document.getElementById("countdown").innerHTML = "🎂 Happy Birthday 🎉";
+        document.querySelector("#countdown h1").innerHTML = "🎂 Happy Birthday 🎉";
     }
 
 }, 1000);

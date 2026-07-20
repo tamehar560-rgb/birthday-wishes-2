@@ -61,7 +61,7 @@ function createHeart() {
     }, 5000);
 }
 
-setInterval(createHeart, 500);
+setInterval(createHeart, 2500);
 function playMusic() {
     let music = document.getElementById("birthdayMusic");
     music.play();
@@ -103,12 +103,16 @@ setInterval(createBalloon, 1000);
 let count = 3;
 
 let countdown = setInterval(() => {
+
     document.querySelector("#countdown h1").innerHTML = count;
+
     count--;
 
     if (count < 0) {
         clearInterval(countdown);
-        document.querySelector("#countdown h1").innerHTML = "🎂 Happy Birthday 🎉";
+
+        document.getElementById("countdown").style.display = "none";
+        document.getElementById("birthday").style.display = "block";
     }
 
 }, 1000);
